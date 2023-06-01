@@ -11,6 +11,6 @@ export default ({ children, title }) => (
 		<h1>{title}</h1>
 		{children}
 
-		<footer>footer</footer>
+		<footer>&copy; Geno Purple {new Date().getFullYear()}</footer>
 	</div>
 );
