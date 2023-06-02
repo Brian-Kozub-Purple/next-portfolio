@@ -12,9 +12,9 @@ Router.onRouteChangeComplete = () => nProgress.done();
 Router.onChangeError = () => nProgress.done();
 
 export default ({ children, title }) => (
-	<div class="root">
+	<div className="root">
 		<Head>
-			<title>Nextfolio - {typeof title === "string" ? title : ""}</title>
+			<title>{`Nextfolio ${typeof title === "string" ? `- ${title}` : ""}`}</title>
 		</Head>
 		<header>
 			<Link href="/">
