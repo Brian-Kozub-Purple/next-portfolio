@@ -14,7 +14,7 @@ Router.onChangeError = () => nProgress.done();
 export default ({ children, title }) => (
 	<div class="root">
 		<Head>
-			<title>Nextfolio - {title}</title>
+			<title>Nextfolio - {typeof title === "string" ? title : ""}</title>
 		</Head>
 		<header>
 			<Link href="/">

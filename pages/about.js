@@ -1,10 +1,23 @@
+import { Component } from "react";
 import Layout from "../components/Layout";
 
-const About = () => (
-	<Layout title="About">
-		<p>Hi, I'm Geno!</p>
-		<img src="/static/geno.png" alt="Picture of Geno"></img>
-	</Layout>
-);
+export default class About extends Component {
+	static async getInitialProps() {
+		const res = await fetch("https://api.github.com/users/ticet11");
+		const data = await res.json();
+		console.log(data);
+		return { user: data };
+	}
 
-export default About;
+	render() {
+		const { user } = this.props;
+		return (
+			<Layout title="About">
+				<p>{user.bio}</p>
+				<img src={user.avatar_url} alt="Picture of Geno"></img>
+
+				{user.name}
+			</Layout>
+		);
+	}
+}
