@@ -5,7 +5,6 @@ export default class About extends Component {
 	static async getInitialProps() {
 		const res = await fetch("https://api.github.com/users/ticet11");
 		const data = await res.json();
-		console.log(data);
 		return { user: data };
 	}
 
