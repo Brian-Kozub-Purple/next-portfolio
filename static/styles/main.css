@@ -1,0 +1,36 @@
+div.root {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+    width: 100%;
+}
+
+header {
+    width: 100%;
+    display: flex;
+    justify-content: space-around;
+    padding: 1em;
+    font-size: 1.2rem;
+    background: indigo;
+}
+
+header p {
+    color: darkgrey;
+    text-decoration: none;
+}
+
+header p:hover {
+    font-weight: bold;
+    color: lightgrey;
+}
+
+footer {
+    padding: 1em;
+    font-size: 0.8rem;
+}
+
+body {
+    margin: 0;
+    background: #f0f0f0;
+}
