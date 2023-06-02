@@ -1,7 +1,11 @@
 import Layout from "../components/Layout";
 
-export default () => (
+export default ({ statusCode }) => (
 	<Layout title="Error!">
-		<p>This is an error page!</p>
+		{statusCode ? (
+			`Error retrieving data. Status Code: ${statusCode}`
+		) : (
+			<p>This is an error page!</p>
+		)}
 	</Layout>
 );
